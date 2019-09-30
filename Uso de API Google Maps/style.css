@@ -1,0 +1,25 @@
+.main {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+width: 50%;
+height: 500px;
+padding-left: 20px;
+
+
+}
+
+.form_divs{
+display: block;
+height: 20px;
+width: 50%;
+padding: 5px;
+}
+
+#map {
+height: 500px;
+width: 50%;
+}
