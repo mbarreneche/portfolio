@@ -4,7 +4,6 @@ if ($_POST) {
 
 $marcador = armarMarcador($_POST);
 guardarMarcador($marcador);?>
-<script src="fetch.js"></script>
 <?php 
 }
 ?>
@@ -13,10 +12,10 @@ guardarMarcador($marcador);?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="scripts.js"></script>
+    
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Evaluacion Tecnica</title>
+    <title>Ejemplo de uso de API Google Maps</title>
   </head>
   <body>
     <div class="main">
@@ -31,14 +30,19 @@ guardarMarcador($marcador);?>
           <input id="direccion" type="text" name="direccion" value="">
         </div>
         <div class="form_divs">
-          <label for="ciudad">Ciudad</label>
-          <input id="ciudad" type="text" name="ciudad" value="">
-        </div>
-        <div class="form_divs">
           <label for="codigo_postal">Codigo Postal</label>
           <input id="codigo_postal" type="text" name="codigo_postal" value="">
             
           </div>
+        <div class="form_divs">
+          <label for="ciudad">Ciudad</label>
+          <input id="ciudad" type="text" name="ciudad" value="">
+        </div>
+        <div class="form_divs">
+          <label for="provincia">Ciudad</label>
+          <input id="provincia" type="text" name="provincia" value="">
+        </div>
+        
           <div class="form_divs">
           <label for="pais">Pais</label>
           <input id="pais" type="text" name="pais" value="">
@@ -50,10 +54,7 @@ guardarMarcador($marcador);?>
     <div id="map"></div>
     </div>
 
-  
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAYsjtFYAVApwbctcfMlVVcliRwKVpv0Y&callback=initMap">
-    </script>
-    
+    <script src="scripts.js"></script>
+    <script src="fetch.js"></script>
   </body>
 </html>
