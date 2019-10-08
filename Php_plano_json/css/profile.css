@@ -1,0 +1,125 @@
+/* CSS DEL PERFIL */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 70px;
+  max-width: 600px;
+ }
+ 
+ .profile__title {
+   font-size: 26px;
+   margin-bottom: 30px;
+   font-size: 700;
+   margin-top: 15px;
+ }
+ 
+ .profile__info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+ }
+ 
+ .profile__info__avatar {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .profile__info__avatar__pic {
+   width: 150px;
+   height: 150px;
+   border: 2px solid #440A7F;
+   margin-bottom: 5px;
+ }
+ 
+ .profile__info__avatar__change:hover {
+   text-decoration: none;
+ }
+ 
+ .profile__info__data {
+   height: 171px;
+   width: 100%;
+   font-size: 16px;
+ }
+ 
+ .profile-data__list {
+   height: 171px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+ }
+ 
+ .profile-data__list__item__label {
+   font-weight: 700;
+   color: #440a7f;
+   margin-right: 5px;
+ }
+ 
+ .profile-data__list__item__data {
+   text-transform: capitalize;
+ }
+ 
+ .profile-data__list__item__data--lowercase {
+   text-transform: initial;
+ }
+ 
+ .change-avatar__form {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .change-avatar__form__label {
+   color: #440A7F;
+   /* margin-bottom: 10px; */
+   font-weight: 700;
+   font-size: 16px;
+ }
+ 
+ .change-avatar__form__input {
+   background-color: white;
+   padding: 5px;
+   color: #440A7F;
+   margin-bottom: 10px;
+   margin-top: 10px;
+ }
+ 
+ input[type="file"].change-avatar__form__input {
+   margin-top: 10px;
+ }
+ 
+ .change-avatar__form__btn {
+   width: 100px;
+   box-shadow: none;
+   border: none;
+   background-color: #440A7F;
+   color: white;
+   border-radius: 0.25rem;
+   height: 34px;
+   margin-top: 10px;
+ }
+ 
+ @media (min-width: 768px) {
+   .profile__title {
+     font-size: 36px;
+   }
+   .profile__info {
+     flex-direction: row;
+   }
+   .profile__info__avatar {
+     margin-right: 20px;
+   }
+   .profile__info {
+     max-width: 80%;
+   }
+   .change-avatar {
+     width: 80%;
+   }
+ }
+ 

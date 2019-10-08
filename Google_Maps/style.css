@@ -20,6 +20,16 @@ padding: 5px;
 }
 
 #map {
-height: 500px;
-width: 50%;
+  font-family: Arial;
+  font-size:12px;
+  line-height:normal !important;
+  height:400px;
+  width:80%;
+  background:transparent;
 }
+    
+#contenedor {
+  width:750px;
+ display:flex;
+flex-direction:row;
+    }

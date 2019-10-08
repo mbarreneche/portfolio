@@ -1,4 +1,4 @@
-<?php  
+<!-- <?php  
 require_once("datos.php");
 if ($_POST) {
 
@@ -6,7 +6,7 @@ $marcador = armarMarcador($_POST);
 guardarMarcador($marcador);?>
 <?php 
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -38,10 +38,7 @@ guardarMarcador($marcador);?>
           <label for="ciudad">Ciudad</label>
           <input id="ciudad" type="text" name="ciudad" value="">
         </div>
-        <div class="form_divs">
-          <label for="provincia">Ciudad</label>
-          <input id="provincia" type="text" name="provincia" value="">
-        </div>
+        
         
           <div class="form_divs">
           <label for="pais">Pais</label>
@@ -51,10 +48,13 @@ guardarMarcador($marcador);?>
 </div>
         </form>
       </div>
-    <div id="map"></div>
+      <div id="map"></div> 
     </div>
 
-    <script src="scripts.js"></script>
-    <script src="fetch.js"></script>
+    
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyB28voGViXZXdV3ptq1AKqr1Vpppimu1FQ" async defer>
+    <script src="mapfunction.js"></script> 
+    
   </body>
+  
 </html>

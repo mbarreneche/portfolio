@@ -6,7 +6,7 @@ fetch("lugares.json")
       })
       .then(function(data){
         var lugares = JSON.stringify(data)
-        console.log(lugares);});
+        console.log(lugares.length);});
       
 
       

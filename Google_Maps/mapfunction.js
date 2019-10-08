@@ -1,9 +1,7 @@
 
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyB28voGViXZXdV3ptq1AKqr1Vpppimu1FQ"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
-<script type="text/javascript">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
-$(document).ready(function() {
+$(document).ready(function(){
 
   var myOptions = {
     zoom: 13,
@@ -13,26 +11,24 @@ $(document).ready(function() {
 
   var map;
   var marker;
-
   var geocoder = new google.maps.Geocoder();
-  var address = document.getElementById("direccion").value + document.getElementById("codigo_postal").value + document.getElementById("ciudad").value + document.getElementById("provincia").value + document.getElementById("pais").value + 
+  var direccion = "Reconquista 129, " + "Chacabuco, " + "6740, " + "Argentina";
     
-    // Info de Direccion
+    // Dirreciones de Facturacion
     
    var infowindow = new google.maps.InfoWindow({
-    content: document.getElementById("nombre").value 
+    content: direccion;
   });
     
     // Crear Mapa
+
+   
     map = new google.maps.Map(document.getElementById("map"), myOptions);
     
-    geocoder.geocode( { address: address}, function(results, status) {
+    geocoder.geocode( { address: direccion}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK && results.length) {
       if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
 
-          
-        
-          
           // Centrado mapa
         map.setCenter(results[0].geometry.location);
 
@@ -40,7 +36,7 @@ $(document).ready(function() {
         marker = new google.maps.Marker({
             position: results[0].geometry.location,
             map: map,
-            title: Direccion
+            title: "Direccion"
         });
 
         //Listeners
@@ -51,19 +47,19 @@ $(document).ready(function() {
           map.setCenter(marker.getPosition()); 
         });
   
-    //       $("#factura").on('click', function (){
-    //     map.setCenter(results[0].geometry.location);  
+  //         $("#factura").on('click', function (){
+  //       map.setCenter(results[0].geometry.location);  
 	// });
       }
 
     } else {
       $('#map').css({'height' : '15px'});
-      $('#map').html("Oops! La direccion de facturacion de " {}  " no puede ser encontrada. Modifiquela y vuelva a intentarlo.");
+      $('#map').html("Oops! La direccion no puede ser encontrada. Modifiquela y vuelva a intentarlo.");
       resizeIframe();
     }
   });
-
-
+    
+    
   function resizeIframe() {
     var me = window.name;
     if (me) {
@@ -74,6 +70,5 @@ $(document).ready(function() {
       }
     }
   }
-
+    
 });
-     </script>

@@ -1,0 +1,11 @@
+{
+    "lugares": [
+        {
+            "nombre": "Chacabuco",
+            "direccion": "Reconquista 129",
+            "ciudad": "Chacabuco",
+            "codigo_postal": "6740",
+            "pais": "Argentina"
+        }
+    ]
+}
