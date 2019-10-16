@@ -273,18 +273,9 @@ section {
 .point:hover {
   cursor: pointer;
 }
-/**CSS DE LAS PREGUNTAS**/
 
-.preguntas{
-background-color: #9BC434;
-width: 60%;
-height: 60%;
-flex-wrap: wrap;
-}
-.preguntas__pregunta{
-  background-color: black;
-  display: flex;
-
+.error {
+  padding-bottom: 20px;
 }
 
 

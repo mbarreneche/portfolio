@@ -26,46 +26,40 @@ $usuario = traerUsuarioLogueado();
   <nav class="navibar">
     <a class="navibar__home-link" href="index.php"><i class="fas fa-home fa-2x"></i></a>
     <ul class="navibar__list">
-      <li class="navibar__list__item"><a class="navibar__list__item__link" href="#home">Inicio</a></li>
-      <li class="navibar__list__item"><a class="navibar__list__item__link" href="#descripcion">Descripcion</a></li>
+      <li class="navibar__list__item"><a class="navibar__list__item__link" href="index.php">Inicio</a></li>
+      <li class="navibar__list__item"><a class="navibar__list__item__link" href="index.php#descripcion">Descripcion</a></li>
       <?php if (usuarioLogueado()) : ?>
         <li class="navibar__list__item"><a class="navibar__list__item__link" href="perfil.php"><?php echo "$usuario[name]";  ?></a></li>
         <li class="navibar__list__item"><a class="navibar__list__item__link" href="logout.php">Logout</a></li>
       <?php else : ?>
-        <li class="navibar__list__item"><a class="navibar__list__item__link" href="#login">Login</a></li>
-        <li class="navibar__list__item"><a class="navibar__list__item__link" href="#register">Registro</a></li>
+        <li class="navibar__list__item"><a class="navibar__list__item__link" href="index.php#login">Login</a></li>
+        <li class="navibar__list__item"><a class="navibar__list__item__link" href="index.php#register">Registro</a></li>
       <?php endif; ?>
     </ul>
   </nav>
   <section class="profile">
-    <h1 class="profile__title">Nombre de Usuario</h1>
+    
     <div class="profile__info">
-      <div class="profile__info__avatar">
-        <div class="profile__info__avatar__pic" style="background-image: url('img/profile-placeholder.png')"></div>
-      </div>
+      
       <div class="profile__info__data">
         <ul class="profile-data__list">
           <li class="profile-data__list__item">
             <span class="profile-data__list__item__label">Nombre:</span>
-            <span class="profile-data__list__item__data"></span>
+            <span class="profile-data__list__item__data"><?php echo "$usuario[name]";  ?></span>
           </li>
           <li class="profile-data__list__item">
             <span class="profile-data__list__item__label">Apellido:</span>
-            <span class="profile-data__list__item__data"></span>
+            <span class="profile-data__list__item__data"><?php echo "$usuario[lastName]";  ?></span>
           </li>
           <li class="profile-data__list__item">
-            <span class="profile-data__list__item__label">Mail:</span>
-            <span class="profile-data__list__item__data"></span>
+            <span class="profile-data__list__item__label">Email:</span>
+            <span class="profile-data__list__item__data"><?php echo "$usuario[email]";  ?></span>
           </li>
         </ul>
       </div>
     </div>
-    <div class="change-avatar">
-        <form class="change-avatar__form" action="">
-          <label class="change-avatar__form__label" for="avatar">Cambiar avatar:</label>
-          <div>
-            <input class="change-avatar__form__input" type="file" id="avatar" class="form-control" name="avatar">
-            <button class="change-avatar__form__btn" type="submit">Subir</button>
+    
+            >
           </div>
         </form>
     </div>

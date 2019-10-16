@@ -78,7 +78,7 @@ $usuario = traerUsuarioLogueado();
 
     <section class="descripcion" id="descripcion">
       
-      <a class="btn descripcion__start-btn" href="#login"><span>Logueame</span></a>
+    <?php if (usuarioLogueado()) : ?><h1 href="#login">Hola <?php echo "$usuario[name] $usuario[lastName]"  ?></h1><?php endif; ?>
       <?php if (!usuarioLogueado()) : ?><a class="btn descripcion__start-btn" href="#register"><span>Registrame</span></a><?php endif; ?>
     </section>
     <?php if (!usuarioLogueado()) : ?>
@@ -96,12 +96,12 @@ $usuario = traerUsuarioLogueado();
           <?php } ?>
 
           <div class="form__group">
-            <label class="form__group__text-label" for="password">Contraseña:</label>
-            <input class="form__group__text-field" type="password" name="passlogin" id="password" placeholder="Password">
+            <label class="form__group__text-label" for="pwd">Contraseña:</label>
+            <input class="form__group__text-field" type="password" name="pwdlogin" id="pwd" placeholder="Password">
           </div>
-          <?php if (!empty($erroresLogin["password"])) { ?>
+          <?php if (!empty($erroresLogin["pwd"])) { ?>
             <div class="alert alert-danger" role="alert">
-              <?php echo $erroresLogin["password"]; ?>
+              <?php echo $erroresLogin["pwd"]; ?>
             </div>
           <?php } ?>
 
@@ -172,8 +172,8 @@ $usuario = traerUsuarioLogueado();
 <!-- CONTRASEÑA -->
 
           <div class="form__group">
-            <label class="form__group__text-label" for="password">Contraseña</label>
-            <input id="password" class="form__group__text-field" name="password" type="password" placeholder="Password">
+            <label class="form__group__text-label" for="pwd">Contraseña</label>
+            <input id="pwd" class="form__group__text-field" name="pwd" type="password" placeholder="Password">
           </div>
           <div id="ok_password" class="ok"></div>
           <div id="error_password" class="error"></div>
@@ -188,7 +188,7 @@ $usuario = traerUsuarioLogueado();
           <div id="error_password-confirmation" class="error"></div>
           <?php if (!empty($errores["pwd"])) { ?>
             <div class="alert alert-danger" role="alert">
-              <?php echo $errores["password"]; ?>
+              <?php echo $errores["pwd"]; ?>
             </div>
           <?php } ?>
           <div class="form__group form-check">

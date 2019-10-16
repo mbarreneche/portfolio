@@ -3,7 +3,7 @@
 var nombre = document.querySelector('input[name=name]');
 var apellido = document.querySelector('input[name=lastName]');
 var email = document.querySelector('input[name=email]');
-var contraseña = document.querySelector('input[name=password]');
+var contraseña = document.querySelector('input[name=pwd]');
 var repiteContraseña = document.querySelector('input[name=password-confirmation]');
 
  // ---------------- SELECCIONANDO EL CAMPO DE LOS ERRORES Y LOS CHEKS ----------------

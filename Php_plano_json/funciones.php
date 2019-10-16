@@ -39,10 +39,10 @@ function validarRegistro($datos)
   }
 
   // Validar contraseña //
-  if (strlen($datos["password"]) == 0) {  //Validar sin trim por si hay espacios adredes.//
-    $errores["password"] = "La contraseña no puede estar vacia";
-  } else if ($datos["password"] !== $datos["password-confirmation"]) { //Validar que las contraseñas sean iguales//
-    $errores["password"] = "Las contraseñas no coinciden";
+  if (strlen($datos["pwd"]) == 0) {  //Validar sin trim por si hay espacios adredes.//
+    $errores["pwd"] = "La contraseña no puede estar vacia";
+  } else if ($datos["pwd"] !== $datos["password-confirmation"]) { //Validar que las contraseñas sean iguales//
+    $errores["pwd"] = "Las contraseñas no coinciden";
   }
 
   //Validar Terminos y condiciones//
@@ -72,7 +72,7 @@ function armarUsuario($datos)
     "name" => trim($datos["name"]),
     "lastName" => trim($datos["lastName"]),
     "email" => trim($datos["email"]),
-    "password" => password_hash($datos["password"], PASSWORD_DEFAULT),
+    "pwd" => password_hash($datos["pwd"], PASSWORD_DEFAULT),
   ];
 }
 
@@ -124,8 +124,8 @@ function validarLogin($datos)
     $erroresLogin["email"] = "El email no se encuentra registrado";
   }
   //Password
-  if (strlen($datos["password"]) == 0) {
-    $erroresLogin["password"] = "La contraseña no puede estar vacia";
+  if (strlen($datos["pwdlogin"]) == 0) {
+    $erroresLogin["pwd"] = "La contraseña no puede estar vacia";
   }
 
   return $erroresLogin;
